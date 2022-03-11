@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool gameOver;
     public float movementSpeed = 5.0f;
     public float rotationSpeed = 200.0f;
     public GameObject projectilePrefab;
+    public ParticleSystem explosionParticleSystem;
+    private Rigidbody playerRigidbody;
+    private Animator playerAnimator;
+    private AudioSource playerAudioSource;
+    private AudioSource cameraAudioSource;
+    public AudioClip fireClip;
 
-    // Update is called once per frame
+    void Start()
+    {
+        // Inicializamos las variables
+        gameOver = false;
+
+        // Accedemos a las componentes que necesitamos
+        playerRigidbody = GetComponent<Rigidbody>();
+        playerAnimator = GetComponent<Animator>();
+        playerAudioSource = GetComponent<AudioSource>();
+        cameraAudioSource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         // Movimiento del tanque
@@ -18,7 +36,7 @@ public class PlayerController : MonoBehaviour
         // Disparo
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, transform.position, transform.rotation);
         }
     }
 }
