@@ -255,9 +255,9 @@ GameObject:
   - component: {fileID: 3011469963919986407}
   - component: {fileID: 9170957963805065750}
   - component: {fileID: 6530804518502666957}
-  - component: {fileID: 33694406}
-  - component: {fileID: 33694405}
   - component: {fileID: 33694407}
+  - component: {fileID: 33694405}
+  - component: {fileID: 33694406}
   - component: {fileID: -5962269815281925262}
   m_Layer: 8
   m_Name: TankFree_Red
@@ -334,6 +334,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &33694407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503318476722469206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9099411aa487da64f864d14b13b01889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &33694405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503318476722469206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c92081b4d6a164ab04d5a39c80e715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &33694406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -347,31 +372,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9107852, y: 1.125915, z: 2.6642036}
   m_Center: {x: 0.0000003874302, y: 0.06295732, z: -0.038929284}
---- !u!114 &33694405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3503318476722469206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94c92081b4d6a164ab04d5a39c80e715, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &33694407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3503318476722469206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9099411aa487da64f864d14b13b01889, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!54 &-5962269815281925262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -380,10 +380,10 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3503318476722469206}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
