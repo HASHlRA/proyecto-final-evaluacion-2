@@ -42,20 +42,19 @@ public class PlayerController : MonoBehaviour
             shooting();
         }
 
+
+
     }
 
-    private void OnCollisionEnter(Collision otherCollider)
+    private void OnTriggerEnter(Collider other)
     {
-        if (otherCollider.gameObject.CompareTag("Enemy"))
-        {
-            GameOver();
-        }
-
-        if (otherCollider.gameObject.CompareTag("Proyectil"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             GameOver();
         }
     }
+
+
 
     void shooting()
     {
@@ -73,8 +72,16 @@ public class PlayerController : MonoBehaviour
 
     private void GameOver()
     {
-        gameOver = true;
-    }
+        {
+            // Indica que el juego ha finalizado
+            gameOver = true;
 
+            // Bajar el volumen de la música de fondo
+            cameraAudioSource.volume = 0.01f;
+
+            // Muestra en consola tu resultado
+            Debug.Log($"GAME OVER.");
+        }
+    }
 
 }
