@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6391266430433399605}
   m_Layer: 6
   m_Name: "\u0421TF_Missile_Blue"
-  m_TagString: Untagged
+  m_TagString: Proyectil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c92081b4d6a164ab04d5a39c80e715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionParticleSystem: {fileID: 9125212449759046732, guid: cb7cd9b0c56a24d49a40784bd3203ae6,
+    type: 3}
 --- !u!65 &4338700715167373324
 BoxCollider:
   m_ObjectHideFlags: 0

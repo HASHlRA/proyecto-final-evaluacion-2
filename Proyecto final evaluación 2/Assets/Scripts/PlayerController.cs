@@ -8,15 +8,18 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed = 5.0f;
     public float rotationSpeed = 200.0f;
     public GameObject projectilePrefab;
-    public ParticleSystem explosionParticleSystem;
     private Rigidbody playerRigidbody;
     private Animator playerAnimator;
     private AudioSource playerAudioSource;
     private AudioSource cameraAudioSource;
     public AudioClip fireClip;
+    private float cooldown = 2f;
+    private float lastshoot;
 
     void Start()
     {
+        playerAnimator = GetComponent<Animator>();
+
         // Inicializamos las variables
         gameOver = false;
 
@@ -36,8 +39,42 @@ public class PlayerController : MonoBehaviour
         // Disparo
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, transform.rotation);
-            Instantiate(explosionParticleSystem, transform.position, explosionParticleSystem.transform.rotation);
+            shooting();
+        }
+
+    }
+
+    private void OnCollisionEnter(Collision otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("Enemy"))
+        {
+            GameOver();
+        }
+
+        if (otherCollider.gameObject.CompareTag("Proyectil"))
+        {
+            GameOver();
         }
     }
+
+    void shooting()
+    {
+        if (Time.time - lastshoot < cooldown)
+        {
+            return;
+        }
+
+        lastshoot = Time.time;
+        playerAnimator.SetBool("disparo", true);
+        Instantiate(projectilePrefab, transform.position, transform.rotation);
+        playerAudioSource.PlayOneShot(fireClip, 0.3f);
+   
+    }
+
+    private void GameOver()
+    {
+        gameOver = true;
+    }
+
+
 }

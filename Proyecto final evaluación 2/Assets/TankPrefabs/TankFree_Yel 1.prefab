@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7159779359474412056}
   - component: {fileID: 7320474999235952192}
   - component: {fileID: 4665235421850938077}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Wheel_f_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 1740796883505979402}
   - component: {fileID: 668352110612402564}
   - component: {fileID: 4189479652746453096}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Wheel_b_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 8923736194704046165}
   - component: {fileID: 6296594793382606796}
   - component: {fileID: 2315001531700502398}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 6906450744993327603}
   - component: {fileID: 6496040898700069615}
   - component: {fileID: 4951401025953098713}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 5369638024845671581}
   - component: {fileID: 4946122954732822622}
   - component: {fileID: 117428845247243641}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Wheel_f_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6091209666069493876}
-  m_LocalRotation: {x: -0.00000004371139, y: 0.000000043711395, z: 0.00000004371139, w: 1}
+  m_LocalRotation: {x: -0.00000004371139, y: 0.000000043711395, z: 0.00000004371139,
+    w: 1}
   m_LocalPosition: {x: -0.7815211, y: -0.33760527, z: 0.5514127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -421,7 +422,7 @@ GameObject:
   - component: {fileID: 6484384842271494633}
   - component: {fileID: -8147366424752969211}
   - component: {fileID: 3502285092553966870}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Yel 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -521,6 +522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c92081b4d6a164ab04d5a39c80e715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionParticleSystem: {fileID: 9125212449759046732, guid: cb7cd9b0c56a24d49a40784bd3203ae6,
+    type: 3}
 --- !u!54 &-8147366424752969211
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -561,7 +564,7 @@ GameObject:
   - component: {fileID: 6131486674469005156}
   - component: {fileID: 4382070521056007519}
   - component: {fileID: 1627343106233402653}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Wheel_b_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +578,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7552155521712537906}
-  m_LocalRotation: {x: -7.137552e-15, y: 0.000000087422784, z: -0.00000008742279, w: 1}
+  m_LocalRotation: {x: -7.137552e-15, y: 0.000000087422784, z: -0.00000008742279,
+    w: 1}
   m_LocalPosition: {x: -0.78152126, y: -0.3376054, z: -0.57228816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

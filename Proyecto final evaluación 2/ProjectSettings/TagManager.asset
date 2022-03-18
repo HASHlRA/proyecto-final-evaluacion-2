@@ -5,17 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Proyectil
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Proyectil
-  - Player
   - Enemy
-  - EnemyP
+  - PostProcessing
+  - 
   - 
   - 
   - 
