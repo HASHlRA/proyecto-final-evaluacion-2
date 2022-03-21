@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     public bool gameOver;
     public float movementSpeed = 5.0f;
     public float rotationSpeed = 200.0f;
+
     public GameObject projectilePrefab;
     private Rigidbody playerRigidbody;
     private Animator playerAnimator;
     private AudioSource playerAudioSource;
     private AudioSource cameraAudioSource;
     public AudioClip fireClip;
+
     private float cooldown = 2f;
     private float lastshoot;
+
+    private int score;
+    public TextMeshProUGUI ScoreText;
+
 
     void Start()
     {
@@ -28,6 +35,12 @@ public class PlayerController : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         playerAudioSource = GetComponent<AudioSource>();
         cameraAudioSource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+    }
+
+    public void UpdateScore(int pointToAdd)
+    {
+        score += pointToAdd;
+        ScoreText.text = $"Score: {score}";
     }
 
     void Update()
@@ -53,8 +66,6 @@ public class PlayerController : MonoBehaviour
             GameOver();
         }
     }
-
-
 
     void shooting()
     {

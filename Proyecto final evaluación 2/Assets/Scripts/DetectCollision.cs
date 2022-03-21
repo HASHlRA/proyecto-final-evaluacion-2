@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class DetectCollision : MonoBehaviour
 {
+    private PlayerController PlayerControllerScript;
+    public int score;
+
+    void Start()
+    {
+        PlayerControllerScript = FindObjectOfType<PlayerController>();
+    }
+
     public ParticleSystem explosionParticleSystem;
     private void OnTriggerEnter(Collider otherCollider)
     {
@@ -15,6 +23,9 @@ public class DetectCollision : MonoBehaviour
 
         // Destruyo el proyectil
         Destroy(gameObject);
+
+        // Updateamos la puntuación
+        PlayerControllerScript.UpdateScore(score);
 
     }
 }
