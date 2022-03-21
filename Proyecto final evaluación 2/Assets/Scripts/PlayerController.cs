@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
         }
 
         lastshoot = Time.time;
-        playerAnimator.SetBool("disparo", true);
+        playerAnimator.SetTrigger("disparo");
         Instantiate(projectilePrefab, transform.position, transform.rotation);
         playerAudioSource.PlayOneShot(fireClip, 0.3f);
    
